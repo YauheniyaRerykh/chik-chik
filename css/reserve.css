@@ -1,0 +1,116 @@
+.reserve {  /* для кнопки записаться*/
+    padding: 62px 0 124px;  /* прописыаем отступы от футера*/
+
+}
+
+.reserve__title {
+    font-weight: 400; /* стили из фигмы*/
+    font-size: 40px;  /* стили из фигмы*/
+    text-transform: uppercase; /* стили из фигмы*/
+    margin-bottom: 24px;
+}
+.reserve__list {
+    padding-left: 24px; /* расстояние слева до выберите услугу*/
+    margin: 0 0 72px; /* 72 отступ от списка до модуля Услуга*/
+    line-height: 150%; /* указали для всего списка высоту*/
+}
+.reserve__item {
+    margin-bottom: 8px; /* Отступы между списками 1, 2 и 3 (выберите удобный день и время)*/
+}
+
+.reserve__form-container {
+    margin-bottom: 40px; /* Отступ от блока Радио до кнопки Записаться*/
+}
+.reserve__fieldset {
+    padding: 0;  /* у всех филдсетов есть падинги и бордеры автоматом, мы их убираем*/
+    border: none;
+    display: flex; /* на всю ширину экрана кнопки Стрижка ножницами и другие*/
+    flex-wrap: wrap;  /* разрешим переноситься*/
+    margin: 0 0 72px; /* отступы между блоками Услуга Специалиста и Дата и время*/
+    gap: 8px; /* отступы между кнопками Стрижка ножницами и Стрижка машинкой и другими*/
+}
+
+
+
+.reserve__legend {
+    flex-basis: 100%; /* Чтобы заголовок растягивался на всю ширину*/
+    font-weight: 400;  /* Стили из Фигмы*/
+    font-size: 22px;   /* Стили из Фигмы*/
+    line-height: 100%;   /* Стили из Фигмы*/
+    text-transform: uppercase;   /* Стили из Фигмы*/
+    margin-bottom: 24px; /* отступ от Усгуга до кнопки и другие аналогично*/
+}
+
+
+.reserve__fieldset_sub {
+    flex-basis: 100%;    /* они же внутри другого филдсета находятся*/
+    margin-bottom: 24px; /* расстояние между январь и 10.00-11.30*/
+     
+}
+
+.reserve__fieldset:last-child { /* у последнего филдсета Дата и Время отступ 72 применяться не будет снизу*/
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .reserve {
+        padding: 40px 0 80px;
+    }
+
+    .reserve__title {
+        font-size: 32px;
+    }
+
+    .reserve__list {
+        
+        margin-bottom: 40px;
+        
+    }
+
+    .reserve__form-container {
+        margin-bottom: 32px;
+    }
+
+.reserve__fieldset {
+    margin-bottom: 40px;
+}
+
+    .reserve__legend {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .reserve__fieldset_sub {
+        margin-bottom: 20 px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .reserve {
+        padding: 32px 0 64px;
+    }
+
+    .reserve__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .reserve__list {
+        padding-left: 18px;
+        margin-bottom: 32px;
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+    .reserve__form-container {
+        margin-bottom: 24px;
+    }
+
+.reserve__fieldset {
+    margin-bottom: 32px;
+}
+
+    
+}
+

@@ -1,0 +1,74 @@
+
+.radio__input {
+position: absolute;  /* перед стрижка ножницами убирает отступ*/
+-webkit-appearance: none;   /* скрывааем радио для сафари*/
+-moz-appearance: none; /* скрывааем радио для мозилы*/
+appearance: none; /* скрывааем радио для других браузеров*/
+}
+
+.radio__label {  /* это спан который у нас внутри*/
+display: inline-block;  /* чтобы задать ему размеры*/
+padding: 16px 24px; /* расстояние внутри кнопки Стрижка ножницами до краев кнопки*/
+font-size: 14px;  /* стили для Стрижка волос скопированные в Фигме*/
+line-height: 100%;  /* стили для Стрижка волос скопированные в Фигме*/
+text-transform: uppercase; /* стили для Стрижка волос скопированные в Фигме*/
+cursor: pointer; /* курсор пальчик*/
+border: 1px solid #BFBDB2; /* рамка для Стрижка ножницами*/
+border-radius: 36px; /* скругление углов для Стрижка ножницами*/
+}
+
+.radio__label:hover:not(:disabled) {   /* эффект при наведении на радиокнопку Стрижка ножницами'*/
+color: #EFE7BE;    /* меняется цвет при наведении на радиокнопку Стрижка ножницами'*/
+}
+
+.radio__input:focus + .radio__label, /* фокус делвется на инпуте, а проявляется на label, а чтобы он делался на label добавляем через +, эффект при фокусе на радиокнопку Стрижка ножницами'*/
+.radio__input:checked + .radio__label  { /* делается на выбранном элементе Стрижка ножницами'*/
+    color: #241D1C;   /* меняется цвет текста при фокусе на радиокнопку Стрижка ножницами'*/
+    background: #F6F3E3; /* меняется цвет фона при фокусе на радиокнопку Стрижка ножницами'*/
+}
+
+.radio__input:disabled + .radio__label {
+    opacity: 0.3; 
+}
+
+
+
+.radio__label_spec { 
+    position:relative; /* для фотографии внутри кнопки Специалист*/
+padding-left: 52px;  /* расстояние от фото внутри кнопки Специалист*/
+
+}
+
+.radio__label_spec:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: var(--bg-image);  /* картинку берем из html через переменную var*/
+background-size: cover; /* размер для фотографии внутри кнопки Специалист*/
+background-position: center;
+background-repeat: no-repeat; /* убираем повтор для фотографии внутри кнопки Специалист*/
+}
+
+@media (max-width: 768px) {
+.radio__label {
+padding: 12px 15px;
+font-size: 12px;
+}
+
+.radio__label_spec {
+    padding-left: 40px;
+    
+}
+
+.radio__label_spec:before {
+    width: 24px;
+    height: 24px;
+}
+
+}
+
